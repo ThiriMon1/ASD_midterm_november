@@ -30,7 +30,7 @@ public class Plant {
 
     @Override
     public String toString() {
-        return "PlantRepository{" +
+        return "Plant{" +
                 "name='" + name + '\'' +
                 ", type='" + type + '\'' +
                 ", plantDate=" + plantDate +

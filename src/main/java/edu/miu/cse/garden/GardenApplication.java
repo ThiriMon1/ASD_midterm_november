@@ -79,11 +79,14 @@ public class GardenApplication {
 
             gardenService.findAll().forEach(System.out::println);
 
-            System.out.println("delete garden");
-            Optional<Garden> gardenToBeDelete = gardenService.findByGardenName("Herb Garden");
-            System.out.println(gardenToBeDelete.get().getId());
+            System.out.println("delete one garden");
+            Optional<Garden> gardenToBeDelete = gardenService.findByGardenName("Herb Garden Update");
+
             gardenService.deleteGarden(gardenToBeDelete.get().getId());
             gardenService.findAll().forEach(System.out::println);
+
+            System.out.println("remaining plants garden");
+            plantService.getAllPlants().forEach(System.out::println);
 
 
 

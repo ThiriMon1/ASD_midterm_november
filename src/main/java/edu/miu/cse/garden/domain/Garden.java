@@ -17,7 +17,7 @@ public class Garden {
     private Integer id;
     private String name;
     private Double size;
-    @OneToMany(mappedBy = "garden")
+    @OneToMany(mappedBy = "garden", cascade = CascadeType.REMOVE)
     private List<Plant> plants;
 
     public Garden(String name, Double size) {
@@ -27,7 +27,7 @@ public class Garden {
 
     @Override
     public String toString() {
-        return "GardenRepository{" +
+        return "Garden{" +
                 "name='" + name + '\'' +
                 ", size=" + size +
                 '}';
